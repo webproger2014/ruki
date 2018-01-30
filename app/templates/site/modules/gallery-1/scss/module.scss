@@ -1,0 +1,120 @@
+.gallery-1 {
+    background-color: #f3f3f3;
+    padding-bottom: 100px;
+    
+	[class*="separator"] {
+		position: absolute;
+		max-width: none;
+	}
+
+	.separator-left {
+	    left: -109px;
+	    top: 36px;
+	}
+
+	.separator-right{
+	    right: -101px;
+	    top: 428px;
+	}
+
+	[class*="route-"] {
+		display: none;
+		position: absolute;
+		top: 52%;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	[class*="route-"]:hover {
+		transition: 0.4s;
+		opacity: 0.7;
+	}
+
+	.route-left {
+		left: 0;
+	}
+
+	.route-right {
+		right: 0;
+	}
+
+	.mobile {
+		display: none;
+	}
+	.content.mobile {
+		text-align: center;
+		img {
+			max-width: 242px;
+		}
+	}
+	.module_title {
+		text-align: center;
+		font-family: $ProximaSemibold;
+		color: #181818;
+		font-size: 30px;
+		margin-top: 60px;
+	}
+
+	.gallery-content {
+		margin-top: 25px;
+		position: relative;
+	}
+
+	.left-content {
+		position: relative;
+		float: left;
+		width: 50%;
+	}
+
+	.right-content {
+		position: relative;
+		float: right;
+		width: 50%;
+
+		.bg {
+			float: right;
+		}
+	}
+
+	.bg {
+		position: relative;
+		z-index: 1;		
+		margin-top: 30px;
+		cursor: pointer;
+		img {
+			@include radius(15px);
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+
+	.bg:hover {
+		transition: 0.4s;
+		opacity: 0.7;
+	}
+}
+
+@media	screen and (max-width: 960px) and (min-width: 320px) {
+	.gallery-1 {
+		padding-bottom: 40px;
+
+		.module_title {
+			margin-top: 40px;
+			font-size: 24px;
+		}
+
+		[class*="route-"]  {
+			display: block;
+		}
+
+		.mobile {
+			display: block;
+		}
+
+		.desctop {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,231 @@
+.contacts-3 {
+	$inpuTBorder: #3fb61e;
+	$colorInputTile: #1f1f1f;
+	$colorFormTitle: #28333d;
+	$bgCheckPolitica: #3fb61e;
+	$colorPolitica: #2b2b2b;
+	$colorPoliticaA: #2a4d0b;
+	$bgContacts: #FFF;
+	$colorError: red;
+	$colorSuccess: green;
+
+	$bgErrorInput: rgba(255, 0, 0, 0.12);
+
+	background-color: $bgContacts;
+	padding-bottom: 35px;
+	height: 468px;
+
+	.left-content {
+		position: relative;
+		height: 468px;
+		float: left;
+		.bg {
+			position: absolute;
+			bottom: 0;
+			img {
+				max-width: none;
+			}
+		}
+	}
+
+	form {
+		float: right;
+		width: 100%;
+		max-width: 480px;
+		margin: auto;
+		margin-top: 65px;		
+	}
+
+	.form-title {
+		margin-top: 35px;
+		margin-bottom: 30px;
+		font-family: $OpenSansBold;
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.inputs {
+		text-align: justify
+	}
+
+	.inputs:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+
+	.input {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+
+		input[type="text"] {
+			min-height: 40px;
+			padding-left: 10px;
+		}
+
+		textarea {
+			resize: none;
+			min-height: 75px;
+			padding: 10px;
+		}
+
+		input[type="text"], textarea {
+			outline: 0;
+			margin-top: 10px;		
+			display: inline-block;
+			width: 100%;	
+			border: 2px solid $inpuTBorder;	
+			font-family: $ProximaSemibold;	
+			font-size: 18px;
+			@include radius(12px);
+		}
+
+		input[type="text"].error, textarea.error {
+			background-color: $bgErrorInput;
+			transition: 0.4s;
+		}
+	}
+
+	.input-2 {
+		max-width: 224px;
+		height: 98px;
+	}
+
+	.input-title {
+		padding-left: 15px;
+		font-family: $ProximaSemibold;
+		color: $colorInputTile;
+		font-size: 18px;
+	}
+
+	//> MESSAGE SEND
+	.msg {
+
+	}
+
+	.msg.success {
+		color: $colorSuccess;
+	}
+
+	.msg.error {
+		color: $colorError;
+	}
+	//< MESSAGE SEND
+
+	.politica {
+		cursor: pointer;
+
+		.check {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 16px;
+			height: 16px;
+			border: 2px solid $bgCheckPolitica;
+			svg {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 1px;
+				max-width: 10px;
+				max-height: 10px;
+				margin: auto;
+				transition: 0.4s;
+
+				.svg-check {
+					fill: $bgCheckPolitica;
+				}
+			}
+		}
+
+		.check[check="true"] svg {
+			transform: rotate(0deg) scale(1);
+			opacity: 1;
+		}
+
+		.check[check=""] svg,
+		.check[check="false"] svg {
+			transform: rotate(50deg) scale(1.8);
+			opacity: 0;			
+		}
+
+		.check.warning {
+			transition: 0.4s;
+			border-color: red;
+		}
+		
+		.caption {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 15px;
+			font-family: $Proxima;
+			font-size: 11px;
+			color: $colorPolitica;
+			font-weight: bold;
+
+			a {
+				color: $colorPoliticaA;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	[class*="btn_"] {
+		margin-top: 22px;
+	}
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.contacts-3 {
+		form {
+			margin-top: 10px;
+			float: none !important;
+		}
+		
+		.left-content {
+			.bg {
+				display: none;
+			}
+		}
+	}
+}
+@media screen and (max-width: 660px) and (min-width: 320px) {
+	.contacts-3 {
+		.input-2 {
+			max-width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 524px) and (min-width: 320px) {
+	.contacts-3 {
+
+		.form-title {
+			font-size: 16px;
+			font-family: $OpenSans;
+			line-height: 18px;
+		}		
+
+		.input-2 {
+			max-width: 100%;
+		}
+
+		.politica {
+			.caption {
+				margin-left: 5px;
+				width: 85%;
+			}
+		}
+
+		.input {
+			input[type="text"], textarea {
+				font-size: 18px;
+			}
+		}	
+
+		.form-send {
+			text-align: center;
+		}	
+	}
+}

@@ -1,0 +1,49 @@
+.title-button {
+	background-color: #28333d;
+	min-height: 160px;
+	margin-top: 50px;
+
+	.module_title {
+		font-family: $OpenSansBold;
+		color: #FFF;
+		font-size: 36px;
+		text-transform: uppercase;
+		line-height: 38px;
+		float: left;
+		width: 70%;
+		margin-top: 30px;
+	}
+
+	[class*="btn_"] {
+		float: right;
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.title-button {
+		text-align: center;
+		padding-bottom: 20px;
+		padding-top: 20px;
+
+		.module_title {
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		[class*="btn_"] {
+			float: none !important;
+			margin-top: 20px;
+		}		
+	}
+}
+
+@media screen and (max-width: 748px) and (min-width: 320px) {
+	.title-button {
+		margin-top: 30px;
+		.module_title {
+			font-size: 24px;
+			line-height: 27px;
+		}	
+	}
+}

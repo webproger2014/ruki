@@ -1,0 +1,93 @@
+@import "../libs/functions.scss";
+@import "../fonts/fonts.scss";
+//> OVERALL
+$bgBtn1: #3fb61e;
+$colorBtn1: #FFF;
+[class*="btn_"] {
+	padding: 10px 0;
+	border-radius: 35px;
+	outline: 0;
+	cursor: pointer;
+	display: inline-block;
+    text-align: center;
+}
+
+.btn-cont {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  text-align: center;
+}
+
+
+.btn_1 {
+	width: 158px;
+	background-color: $bgBtn1;
+	color: $colorBtn1;
+	border: 1px solid $bgBtn1;	
+	font-family: $ProximaSemibold;
+	font-size: 16px;
+} 
+.btn_1:hover {
+	transition: 0.4s;
+	background-color: transparent;
+	color: $bgBtn1;
+}
+
+.btn_2 {
+	width: 245px;
+	background-color: $bgBtn1;
+	color: $colorBtn1;
+	border: 1px solid $bgBtn1;	
+	font-family: $ProximaSemibold;
+	font-size: 16px;
+} 
+.btn_2:hover {
+	transition: 0.4s;
+	background-color: transparent;
+}
+
+
+.btn_3 {
+  width: 245px;
+  background-color: $bgBtn1;
+  color: $colorBtn1;
+  border: 1px solid $bgBtn1;  
+  font-family: $ProximaSemibold;
+  font-size: 16px;
+} 
+.btn_3:hover {
+  transition: 0.4s;
+  background-color: transparent;
+  color: $bgBtn1;
+}
+
+[class*="route-"] {
+	position: absolute;
+}
+
+@import "../templates/site/plugins/owl/scss/plugin.scss";
+@import "../templates/site/plugins/swiper/scss/plugin.scss";
+@import "../templates/site/plugins/photoswipe/scss/plugin.scss";
+@import "../templates/site/widgets/modal/scss/widget.scss";
+//< OVERALL  
+
+@import "../templates/site/modules/header-nav/scss/module.scss";
+@import "../templates/site/modules/header-bunner/scss/module.scss";
+@import "../templates/site/modules/number-items-2/scss/module.scss";
+@import "../templates/site/modules/about-company-2/scss/module.scss";
+@import "../templates/site/modules/advantages-module-3/scss/module.scss";
+@import "../templates/site/modules/information-slider/scss/module.scss";
+@import "../templates/site/modules/information-2/scss/module.scss";
+@import "../templates/site/modules/gallery-1/scss/module.scss";
+@import "../templates/site/modules/bunner-3/scss/module.scss";
+@import "../templates/site/modules/content-1/scss/module.scss";
+@import "../templates/site/modules/contacts-3/scss/module.scss";
+@import "../templates/site/modules/information-3/scss/module.scss";
+@import "../templates/site/modules/number-items-3/scss/module.scss";
+@import "../templates/site/modules/comments-1/scss/module.scss";
+@import "../templates/site/modules/module-contacts-2/scss/module.scss"; 
+@import "../templates/site/modules/map-1/scss/module.scss"; 
+
+
+

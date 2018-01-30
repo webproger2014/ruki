@@ -1,0 +1,141 @@
+$colorTitleCaption: #3dc1a6;
+$colorAdvantageDesc: #28333d;
+$bgAdvantage: #f3f4f9;
+$advantagesvgbg: #000;
+.advantages-module-1 {
+	margin-top: 60px;
+
+
+	[class*="route-"] {
+		position: absolute;
+		display: none;
+		z-index: 10;
+		top: 55px;
+	}
+	.owl-dot {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		@include radius;
+		border: 2px solid #3cbfa4;
+		margin-right: 5px;
+		margin-top: 15px;
+	}
+
+	.owl-dot.active {
+		background-color: #28333d;
+		border-color: #28333d;
+	}
+
+	.route-left {
+		left: 0;
+	}
+
+	.route-right {
+		right: 0;
+	}
+
+	.advantages-content {
+		position: relative;
+	}
+
+	.advantages-title {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		text-align: center;
+		font-family: $OpenSansSemibold;
+		font-size: 30px;
+		color: #28333d;
+
+		.caption {
+			color: $colorTitleCaption;
+		}
+
+	}
+
+	.advantages-content {
+		margin-top: 65px;
+	}
+
+	.advantages-content-wrapper {
+		text-align: justify;
+		overflow: hidden;
+	}
+
+	.advantages-content-wrapper:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+	
+	.advantage {
+		display: inline-block;
+		vertical-align: top;
+		background-color: $bgAdvantage;
+		min-height: 125px;
+		width: 305px;
+	}	
+
+	.advantage-wrapper {
+		display: flex;
+		min-height: inherit;
+		padding: 0 10px;
+	}
+
+	.advantage-bg {
+		margin: auto;
+
+		.bg-svg {
+			width: 70px;
+			height: 70px;
+			@include radius(50%);
+			display: flex;
+
+			svg {
+				width: 36px;
+				margin: auto;
+				.svg {
+					fill: $advantagesvgbg;
+				}
+			}
+		}		
+	}
+
+	.success-1 {
+		height: 43px;
+		width: 43px;
+	}
+
+	.advantage-desc {
+		font-family: $OpenSans;
+		color: $colorAdvantageDesc;
+		line-height: 18px;
+		text-align: left;
+		margin: auto;
+		padding-left: 10px;
+		width: 68%;
+	}
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.advantages-module-1 {
+		[class*="route-"] {
+			display: block;
+		}
+		.advantages-title {
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		.advantages-content-wrapper {
+			text-align: center;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.advantage {
+			width: 100%;
+		}
+	}
+}

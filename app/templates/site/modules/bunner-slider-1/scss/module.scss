@@ -1,0 +1,151 @@
+$colorSlideTitle: #FFF;
+
+.bunner-slider-1 {
+	margin-top: 65px;
+
+	.module_wrapper {
+		position: relative;
+	}
+
+	.route-left {
+		left: 0;
+	}
+	.route-right {
+		right: 0;
+	}
+	[class*="route-"] {
+		top: 200px;
+		cursor: pointer;
+
+		svg {
+			.st0 {
+				fill:none;
+				stroke:#ffffff;
+				stroke-width:2;
+				stroke-miterlimit:10;
+			}
+
+			.st1 {
+				stroke: #3dc1a6;
+				stroke-width: 1px;
+				fill: #3dc1a6;
+			}
+		}		
+	}
+
+	[class*="route-"]:hover {
+		svg {
+			.st0 {
+			 transition: 0.4s;
+			 fill: rgba(61, 193, 166, 0.058);
+			}
+
+			.st1 {
+				transition: 0.4s;
+				stroke-width: 1px;
+				fill: rgba(255, 255, 255, 0);
+			}
+		}
+	}
+
+	.slide {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 400px;
+	}
+
+	.right-content {
+		float: right;
+		width: 50%;
+	}
+
+	.slide-title {
+		font-family: $OpenSansBold;
+		color: $colorSlideTitle;
+		font-size: 36px;
+		text-transform: uppercase;		
+		line-height: 36px;
+		margin-top: 115px;
+	}
+
+	[class*="btn_"] {
+		margin-top: 28px;
+	}
+}
+
+.bunner-slider-mobile {
+	display: none !important;
+	text-align: center;
+
+	.module_container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.slide-title {
+		font-family: $OpenSansBold;
+		color: #28333d;
+		font-size: 22px;
+		text-transform: uppercase;		
+		line-height: 25px;
+		margin-top: 20px;
+	}	
+
+	[class*="btn_"] {
+		margin-top: 20px;
+	}
+
+	.owl-dot {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		@include radius;
+		border: 2px solid #3cbfa4;
+		margin-right: 5px;
+		margin-top: 15px;
+	}
+
+	.owl-dot.active {
+		background-color: #28333d;
+		border-color: #28333d;
+	}	
+}
+
+@media screen and (max-width: 960px) and (min-width: 524px) {
+	.bunner-slider-1  {
+		.slide {
+			min-height: 180px;
+
+			svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		
+		[class*="route-"] {
+			top: 95px;
+		}
+		.right-content {
+			width: 100%;
+			text-align: center;
+		}
+
+		.slide-title {
+			margin-top: 15px;
+			font-size: 30px;
+			line-height: 28px;
+		}
+	}
+}
+
+@media screen and (max-width: 524px) and (min-width: 320px) {
+	.bunner-slider-1  {
+		display: none !important;
+		margin-top: 30px;
+	}
+
+	.bunner-slider-mobile {
+		display: block !important;
+	}
+}

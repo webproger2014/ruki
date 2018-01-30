@@ -1,0 +1,165 @@
+
+$bgInformSec1: #f3f4f9;
+$bgInformSec2: #28333d;
+$colorInformSec1Desc: #28333d;
+$colorInformSec2Desc: #FFF;
+$colorinformationtitle: #28333d;
+$colorinformationtitlecaption: #3cbfa4;
+
+.information-1 {
+	[class*="route-"] {
+		position: absolute;
+		display: none;
+		z-index: 10;
+		top: 80px;
+	}
+	.owl-dots {
+		text-align: center;
+	}
+
+	.owl-dot {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		@include radius;
+		border: 2px solid #3cbfa4;
+		margin-right: 5px;
+		margin-top: 15px;
+	}
+
+	.owl-dot.active {
+		background-color: #28333d;
+		border-color: #28333d;
+	}
+
+	.route-left {
+		left: 0;
+	}
+
+	.route-right {
+		right: 0;
+	}
+
+	.informations {
+		position: relative;
+	}
+
+	.information-title {
+		text-align: center;
+		margin-top: 60px;
+		font-family: $OpenSansSemibold;
+		color: $colorinformationtitle;
+		font-size: 30px;
+		.caption {
+			color: $colorinformationtitlecaption;
+		}
+	}
+
+	.informations {
+		margin-top: 60px;
+	}
+
+	.informations-wrapper {
+		text-align: justify;
+	}
+	.informations-wrapper:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+
+	.item {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		max-width: 470px;
+		text-align: left;
+	}
+
+	.item-sec-1 {
+		background-color: $bgInformSec1;
+		padding-left: 20px;
+		min-height: 185px;
+
+		.item-desc {
+			font-family: $OpenSansBold;
+			color: $colorInformSec1Desc;
+			font-size: 24px;
+		}
+
+		.item-caption {
+			font-size: 16px;
+			font-family: $OpenSansSemibold;
+			color: $colorInformSec1Desc;
+		}
+	}
+
+	.item-sec-2 {
+		display: flex;
+		background-color: $bgInformSec2;
+		padding: 0 20px;
+		min-height: 155px;
+
+		.item-desc {
+			margin: auto;
+			font-family: $OpenSansSemibold;
+			color: $colorInformSec2Desc;
+			font-size: 18px;
+		}		
+	}
+
+	.item-desc {
+		display: inline-block;
+		width: 100%;
+		margin-top: 20px;
+		line-height: 22px;
+
+	}
+
+	.item-caption {
+		margin-top: 22px;
+	}
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.information-1 {
+		[class*="route-"] {
+			display: block;
+		}
+
+		.informations-wrapper {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		.item {
+			max-width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 524px) and (min-width: 320px) {
+	.information-1 {
+		.information-title {
+			font-size: 24px;
+			line-height: 29px;
+			margin-top: 40px;			
+		}
+
+		.item-sec-1,
+		.item-sec-2 {
+			padding-left: 10px;
+			.item-desc {
+				font-size: 15px;
+				line-height: 13px;
+			}
+
+			.item-caption {
+				font-size: 14px;
+				margin-top: 10px;
+				line-height: 16px;
+			}
+
+		}
+	}
+}

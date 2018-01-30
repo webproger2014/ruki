@@ -1,0 +1,106 @@
+$colorBunnerTitle: #1e1e1e;
+$colorBunnerDesc: #1e1e1e;
+.header-bunner {
+	@include bg('bunner.jpg');
+	min-height: 525px;
+	margin-top: 78px;
+
+	.mobile-bunner-bg {
+		display: none;
+		vertical-align: top;
+		overflow: hidden;
+		text-align: center;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.right-content {
+		float: right;
+		width: 43%;
+		margin-top: 80px;
+	}
+
+	.bunner-title {
+		font-family: $ProximaBold;
+		color: $colorBunnerTitle;
+		font-size: 36px;
+		line-height: 40px;
+
+		.caption {
+			color: #3fb61e;
+		}
+
+		.line {
+			width: 85px;
+			height: 3px;
+			margin-top: 38px;
+			background-color: #3fb61e;
+		}
+	}
+
+	.bunner-desc {
+		margin-top: 25px;
+		font-family: $Proxima;
+		color: $colorBunnerDesc;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	
+	[class^="btn_"] {
+		margin-top: 22px;
+	}
+
+}
+
+@media screen and (max-width: 620px) and (min-width: 620px) {
+	.header-bunner {
+		.right-content {
+			width: 100%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 620px) and (min-width: 320px) {
+	.header-bunner {
+		margin-top: 25px;
+		background-image: none;
+		min-height: auto;
+
+		.right-content {
+			width: 100%;
+		}
+		
+		.mobile-bunner-bg {
+			display: inline-block;
+			margin-top: 10px;
+		}
+
+		.bunner-title {
+			font-family: $ProximaBold;
+			text-align: left;
+			font-size: 24px;
+			line-height: 25px;
+			color: #1e1e1e;
+
+			.line {
+				margin-top: 15px;
+			}
+		}
+
+		.bunner-desc {
+			font-family: $Proxima;
+			text-align: left;
+			font-size: 16px;
+			color: #1e1e1e;
+		}
+		
+		.btn-container {
+			text-align: left;
+		}
+
+		.right-content {
+			margin-top: 20px;
+		}
+	}
+}

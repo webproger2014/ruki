@@ -1,0 +1,161 @@
+.number-items-3 {
+	background-color: #f3f3f3;
+
+	.module_title {
+		text-align: center;
+		font-family: $ProximaSemibold;
+		color: #181818;
+		font-size: 30px;
+		line-height: 32px;
+		margin-top: 60px;
+
+		.caption {
+			color: #3fb61e;
+		}		
+	}
+
+	.owl-dots {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.owl-dot {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border: 1px solid #181818;
+		margin-right: 8px;
+		@include radius;
+	}
+
+	.owl-dot.active {
+		border-color: #3fb61e;
+		background-color: #3fb61e;
+	}
+	[class*="route-"] {
+		display: none;
+		position: absolute;
+		top: 42%;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	[class*="route-"]:hover {
+		transition: 0.4s;
+		opacity: 0.7;
+	}
+
+	.route-left {
+		left: 0;
+	}
+
+	.route-right {
+		right: 0;
+	}
+
+	.content-numbers {
+		margin-top: 40px;
+		position: relative;
+	}
+
+	.content-numbers-wrapper {
+		text-align: justify;
+	}
+
+	.content-numbers-wrapper:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	} 
+
+	.item-fix {
+		opacity: 0;
+	}
+	
+	.item {
+		position: relative;
+		display: inline-block;
+		margin-top: 60px;
+		text-align: left;
+	}
+
+	.modal-content {
+		display: none;
+	}
+	
+	.item-number {
+		position: absolute;
+		top: -50px;
+		left: 20px;
+		font-family: $ProximaSemibold;
+		font-size: 60px;
+		color: #3fb61e;		
+	}
+
+	.item-wrapper {
+		position: relative;
+		z-index: 1;
+		background-color: #FFF;
+		height: 140px;
+		width: 305px;
+		padding-left: 20px;
+		padding-top: 20px;
+		@include radius(15px);
+	}
+
+	.item-title {
+		font-family: $ProximaSemibold;
+		font-size: 24px;
+		color: #181818;
+		line-height: 20px;
+	}
+
+	.item-next {
+		margin-top: 40px;
+		a {
+			font-family: $ProximaSemiboldItalic;
+			font-size: 16px;
+			color: #181818;
+
+			span {
+				display: inline-block;
+				border-bottom: 1px solid #181818;
+				line-height: 20px;
+			}
+		}
+
+		a:hover {
+			transition: 0.4s;
+			opacity: 0.7;
+		}
+	}
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.number-items-3 {
+		[class*="route-"] {
+			display: block;
+		}
+
+		.module_title {
+			font-size: 24px;
+			margin-top: 40px;
+		}
+
+		.item {
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.item-title {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		.item-wrapper {
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
